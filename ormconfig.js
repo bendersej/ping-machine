@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   type: "postgres",
   host: "localhost",
@@ -7,9 +9,9 @@ module.exports = {
   database: process.env.PG_DATABASE,
   synchronize: false,
   logging: false,
-  entities: [process.env.TYPEORM_ENTITIES_PATH],
-  migrations: [process.env.TYPEORM_MIGRATIONS_PATH],
-  subscribers: [process.env.TYPEORM_SUBSCRIBERS_PATH],
+  entities: [path.join(__dirname, process.env.TYPEORM_ENTITIES_PATH)],
+  migrations: [path.join(__dirname, process.env.TYPEORM_MIGRATIONS_PATH)],
+  subscribers: [path.join(__dirname, process.env.TYPEORM_SUBSCRIBERS_PATH)],
   cli: {
     entitiesDir: "src/server/db/schema",
     migrationsDir: "src/server/db/migration",
