@@ -5,7 +5,8 @@
     "lint": "tslint --project .",
     "lint:fix": "yarn lint --fix",
     "build": "tsc",
-    "upgrade-db": "yarn run typeorm migration:run"
+    "run-db-migrations": "yarn run typeorm migration:run",
+    "start-mock-server": "ts-node mock_intranet_server"
   },
   "devDependencies": {
     "@types/cron": "^1.7.2",
@@ -16,23 +17,23 @@
     "@types/koa__router": "^8.0.2",
     "@types/node-fetch": "^2.5.7",
     "@types/ping": "^0.2.0",
-    "eslint": "^7.2.0",
+    "eslint": "^7.6.0",
     "prettier": "^2.0.5",
-    "typescript": "^3.9.5"
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7"
   },
   "dependencies": {
-    "@koa/router": "^9.0.1",
+    "@koa/router": "^9.3.1",
     "cron": "^1.8.2",
     "dotenv": "^8.2.0",
-    "koa": "^2.12.0",
+    "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-helmet": "^5.2.0",
     "node-fetch": "^2.6.0",
-    "pg": "^8.2.1",
+    "pg": "^8.3.0",
     "ping": "^0.2.3",
     "reflect-metadata": "^0.1.13",
-    "runtypes": "^4.2.0",
-    "ts-node-dev": "^1.0.0-pre.44",
+    "runtypes": "^5.0.1",
     "typeorm": "^0.2.25"
   }
 }

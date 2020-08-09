@@ -7,8 +7,6 @@ export interface Config {
   intranetBaseURL: string;
 }
 
-const isDevMode = process.env.NODE_ENV == "development";
-
 const config: Config = {
   port: +(process.env.SERVER_PORT ?? 3000),
   intranetBaseURL: process.env.INTRANET_SERVER_URL ?? "",

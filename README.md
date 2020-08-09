@@ -29,8 +29,9 @@ INTRANET_SERVER_URL=http://localhost:4000
 ```
 
 4. Run `docker-compose up -d` to create / start the databse
-5. Run `yarn ts-node mock_intranet_server`
-6. Run `yarn dev` to run the ping-machine server
+5. Run `yarn run-db-migrations`
+6. Run `yarn start-mock-server`
+7. Run `yarn dev` to run the ping-machine server
 
 ## API
 
