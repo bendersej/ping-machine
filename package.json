@@ -1,12 +1,14 @@
 {
   "scripts": {
+    "start:db": "docker-compose up -d",
+    "start:db-migrations": "yarn run typeorm migration:run",
+    "start:server": "ts-node-dev src",
+    "start:mock-server": "ts-node mock_intranet_server",
     "typeorm": "yarn run ts-node ./node_modules/typeorm/cli.js",
-    "dev": "ts-node-dev src",
+    "dev": "yarn start:db && yarn start:db-migrations && yarn start:server",
     "lint": "tslint --project .",
     "lint:fix": "yarn lint --fix",
-    "build": "tsc",
-    "run-db-migrations": "yarn run typeorm migration:run",
-    "start-mock-server": "ts-node mock_intranet_server"
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/cron": "^1.7.2",
